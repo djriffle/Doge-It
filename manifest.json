@@ -1,0 +1,33 @@
+{
+  "name": "Doge-it",
+  "version": "1.0",
+  "description": "Wow Page Much Improved",
+
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "options.js"
+                
+                 
+            ],
+            "run_at": "document_end"
+        }
+    ],
+
+    "browser_action": {
+  "default_popup": "veryPopup.html",
+  "default_icon": "images/doge.png"
+  }
+  ,
+
+  "manifest_version": 2
+}
